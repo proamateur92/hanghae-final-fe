@@ -11,5 +11,13 @@ import PostWrite from './PostWrite';
 import PostUpdate from './PostUpdate';
 import Signup from './Signup';
 import UserEdit from './UserEdit';
+import CommunityWrite from './CommunityWrite';
+import CommunityUpdate from './CommunityUpdate'
+import CommunityDetail from './CommunityDetail';
+import RecruitUpdate from './RecruitUpdate';
+import RecruitWrite from './RecruitWrite';
+import RecruitDetail from './RecruitDetail';
 
-export { FindPwd, Home, Login, Mypage, UserEdit, NotFound, Notice, NoticeDetail, Post, PostDetail, PostWrite, PostUpdate, Signup };
+
+
+export { FindPwd, Home, Login, Mypage, UserEdit, NotFound, Notice, NoticeDetail, Post, PostDetail, PostWrite, PostUpdate, Signup, CommunityDetail, CommunityUpdate, CommunityWrite, RecruitDetail, RecruitUpdate, RecruitWrite };

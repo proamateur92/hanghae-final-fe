@@ -27,7 +27,7 @@ const PostDetail = () => {
     setBubbleOn(!bubbleOn);
   };
 
-// axios에서 데이터를 받아오기
+// axios에서 데이터를 받아오기(해당되는 데이터만)
 useEffect(() => {
   instance.get("/api/post/"+params.id)
     .then(response => {
@@ -36,6 +36,7 @@ useEffect(() => {
     })
 }, [like]);
   
+  //전체 데이터 받아오기
   useEffect(() => {
   instance.get("/api/post/category/all?page=0")
     .then(response => {
@@ -43,10 +44,6 @@ useEffect(() => {
     })
 }, []);
   
-const deletePost = (e) => {
-    e.preventDefault(); 
-    dispatch(removeDataDB(params.id)) //removeDateDB에 id 전달해줌.
-  }
 
   const clickHeart = () => {
     instance.post("/api/heart/" + params.id)

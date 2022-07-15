@@ -3,7 +3,7 @@ import React, { useEffect, useCallback } from 'react';
 
 // route
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { FindPwd, Home, Login, Mypage, UserEdit, NotFound, Notice, NoticeDetail, Post, PostDetail, PostWrite, PostUpdate, Signup } from './pages/Index';
+import { FindPwd, Home, Login, Mypage, UserEdit, NotFound, Notice, NoticeDetail, Post, PostDetail, PostWrite, PostUpdate, Signup, CommunityDetail, CommunityUpdate, CommunityWrite, RecruitDetail, RecruitUpdate, RecruitWrite } from './pages/Index';
 
 // style
 import GlobalStyles from './styles/GlobalStyles';
@@ -22,6 +22,7 @@ import { loadHeartDB } from './redux/modules/heartSlice';
 
 // Test
 import Comment from './components/Comment';
+
 
 function App() {
   // redux 테스트 코드 시작
@@ -80,6 +81,12 @@ function App() {
           <Route path='/post/write' element={<PostWrite />} />
           <Route path='/post/update/:id' element={<PostUpdate />} />
           <Route path='/post/detail/:id' element={<PostDetail />} />
+          <Route path='/community/write' element={<CommunityWrite />} />
+          <Route path='/community/update/:id' element={<CommunityUpdate />} />
+          <Route path='/community/detail/:id' element={<CommunityDetail />} />
+          <Route path='/recruit/write' element={<RecruitWrite />} />
+          <Route path='/recruit/update/:id' element={<RecruitUpdate />} />
+          <Route path='/recruit/detail/:id' element={<RecruitDetail />} />
           <Route path='/notice' element={<Notice />} />
           <Route path='/notice/detail/:id' element={<NoticeDetail />} />
           <Route path='*' element={<NotFound />} />

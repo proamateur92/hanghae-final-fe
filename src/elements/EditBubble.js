@@ -27,14 +27,17 @@ const EditBubble = (props) => {
 
   const deleteAction = (e) => {
     e.preventDefault(); 
-    dispatch(removeDataDB(params.id)) //removeDateDB에 id 전달해줌.
-    window.confirm("정말 삭제하시겠어요?");
+    if (window.confirm("정말 삭제하시겠어요?")) {
+       dispatch(removeDataDB(contentsId)) //removeDateDB에 id 전달해줌.
+    }
+   
+    
   };
 
   return (
     <>
     <Bubble ref={bubbleRef}>
-      <p onClick={() =>navigate('/post/update/' + params.id)}>수정하기</p>
+      <p onClick={() => moveToEdit()}>수정하기</p>
       <p onClick={(e) => deleteAction(e)} style={{ color : "red"}}>삭제하기</p>
     </Bubble>
     <BackDrop ref={backDropRef} onClick={(e)=>backDropClose(e)}/>
