@@ -14,6 +14,6 @@ export const setCookie = (key, value) => {
   cookie.set(key, value, { maxAge: 60 * 60 * 24 * 30 });
 };
 
-export const clearStorage = key => {
-  cookie.clear(key);
+export const clearCookie = key => {
+  cookie.remove(key);
 };

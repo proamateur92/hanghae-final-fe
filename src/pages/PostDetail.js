@@ -9,6 +9,7 @@ import { removeDataDB } from "../redux/modules/postSlice";
 import { IoMdMore } from "react-icons/io";
 import { IoHeartOutline, IoChatbubbleOutline, IoHeart } from "react-icons/io5";
 
+import Comment from "../components/Comment";
 import EditBubble from "../elements/EditBubble";
 
 import instance from "../shared/axios";
@@ -34,20 +35,24 @@ const PostDetail = () => {
     setBubbleOn(!bubbleOn);
   };
 
-  // axios에서 데이터를 받아오기(해당되는 데이터만)
+  // axios에서 데이터를 받아오기
   useEffect(() => {
     instance.get("/api/post/" + params.id).then((response) => {
       setData(response.data); //useState의 data에 넣어준다.
-      console.log(response.data);
+      // console.log(response.data)
     });
   }, [like]);
 
-  //전체 데이터 받아오기
   useEffect(() => {
     instance.get("/api/post/category/all?page=0").then((response) => {
-      console.log(response.data);
+      // console.log(response.data)
     });
   }, []);
+
+  const deletePost = (e) => {
+    e.preventDefault();
+    dispatch(removeDataDB(params.id)); //removeDateDB에 id 전달해줌.
+  };
 
   const clickHeart = () => {
     instance.post("/api/heart/" + params.id).then((res) => {
@@ -55,6 +60,13 @@ const PostDetail = () => {
       setLike(!like);
     });
   };
+
+  useEffect(() => {
+    instance.get("/api/heart/" + params.id).then((res) => {
+      // console.log(res)
+      setLike(res.data);
+    });
+  }, []);
 
   useEffect(() => {
     instance.get("/api/heart/" + params.id).then((res) => {
@@ -116,6 +128,8 @@ const PostDetail = () => {
           </span>
         </Reactions>
       </All>
+
+      <Comment postId={params.id} />
     </Wrap>
   );
 };

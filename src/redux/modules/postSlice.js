@@ -1,10 +1,10 @@
 //redux-toolkit
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-//axios
+
+import instance from "../../shared/axios";
+
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import instance from "../../shared/axios";
-// import instance from '../../shared/axios';
 
 export const loadPostsDB = createAsyncThunk("loadPost", async () => {
   const response = await instance
@@ -38,50 +38,9 @@ const postSlice = createSlice({
   name: "post",
   initialState: {
     list: [],
+    pageNumber: 0,
+    last: false,
   },
-  // reducers: {
-  //   //read
-  //   setData: (state, action) => {
-  //     state.list = action.payload;
-  //   },
-
-  //   // 추가하기
-  //   addData: (state, action) => {
-  //     state.list.push(action.payload);
-  //   },
-
-  //   // 삭제하기
-  //   removeData: (state, action) => {
-  //     state.list = state.list.filter(
-  //       (post) => {
-  //         if (post.id === action.payload) { // 받아온 id와 저장되어 있는 데이터의 id가 같으면
-  //           // action.payload => id
-  //           return false;
-  //         } else {
-  //           return true;
-  //         }
-  //       }
-  //     )
-  //   },
-
-  //   //수정하기
-  //   modifyData: (state, action) => {
-  //     state.list = state.list.map(
-  //       (post) => {
-  //         console.log(post, "짝")
-  //         if (post.id === action.payload.id) { // 받아온 id와 저장되어 있는 데이터의 id가 같으면
-  //           return {
-  //             ...post,
-  //             subject: action.payload.data.subject,
-  //             content: action.payload.data.content
-  //           }
-  //         } else {
-  //           return post;
-  //         }
-  //       }
-  //     );
-  //   }
-  // },
 
   extraReducers: {
     [loadPostsDB.fulfilled]: (state, { payload }) => {

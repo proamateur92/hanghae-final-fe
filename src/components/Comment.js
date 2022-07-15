@@ -13,7 +13,7 @@ const Comment = (props) => {
 
   // 코멘트 불러오기
   React.useEffect(() => {
-    dispatch(loadCommentsDB(postId));
+    dispatch(loadCommentsDB({postId:postId, pgNo:0}));
   }, []);
 
   const comments = useSelector((state) => state.comment.list);
@@ -22,12 +22,13 @@ const Comment = (props) => {
   const addComment = async () => {
     const newComment = {
       postId: postId,
-      userId: 0,
-      nickname: "test",
+      // userId: 0,
+      // nickname: "test",
       content: commentRef.current.value,
     };
 
-    await dispatch(addCommentDB(newComment));
+    console.log(postId)
+    await dispatch(addCommentDB(newComment, postId));
     commentRef.current.value = "";
   };
 
@@ -71,7 +72,7 @@ const Comment = (props) => {
     <CommentsWrap>
       {comments?.length > 0 ? (
         comments.map((v, i) => (
-          <OneComment key={v.id}>
+          <OneComment key={v.postId}>
             <h5> {v.nickname} </h5>
             <p> {v.content} </p>
             <sub> 2022-07-05 </sub>

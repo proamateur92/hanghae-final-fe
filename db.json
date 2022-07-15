@@ -21,120 +21,180 @@
   ],
   "post": [
     {
-      "postId": "1",
-      "postCategory": [
+      "page": 0,
+      "content": [
         {
-          "postCategoryId": "1",
-          "name": "귀여움"
+          "postId": 30,
+          "boardMainId": 30,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "갸ㅇ 올려ㅓㅓㅓㅓㅓㅎㅎㅎ",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:41:24.626",
+          "nickname": "30",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
+        },
+        {
+          "postId": 29,
+          "boardMainId": 29,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "사진이 없더",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:41:17.617",
+          "nickname": "29",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
+        },
+        {
+          "postId": 28,
+          "boardMainId": 28,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "nickname": "28",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
+        },
+        {
+          "postId": 27,
+          "boardMainId": 27,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "우리집 강아지는 왈오라와로아ㅗ라오라와롸롸ㅏㅏㅏㅏㄹㄹㄹ",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:41:02.681",
+          "nickname": "27",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
+        },
+        {
+          "postId": 26,
+          "boardMainId": 26,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "잠을 자서 좋겠지 ㅎㅎㅎ...",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:40:51.561",
+          "nickname": "26",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
         }
       ],
-      "boardMain": [
-        {
-          "boardMainId": "1",
-          "user": [
-            {
-              "nickname": "1번요",
-              "img": ""
-            }
-          ],
-          "content": "첫번째 포스트입니다.",
-          "imgURL": [
-            {
-              "imgUrl": "data:image/jpeg;base64,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"
-            }
-          ],
-          "likeCnt": "111",
-          "viewCnt": "111",
-          "createdAt": "2022-07-01"
-        }
-      ]
+      "pageable": {
+        "sort": {
+          "sorted": true,
+          "unsorted": false,
+          "empty": false
+        },
+        "pageNumber": 0,
+        "pageSize": 5,
+        "offset": 0,
+        "unpaged": false,
+        "paged": true
+      },
+      "sort": {
+        "sorted": true,
+        "unsorted": false,
+        "empty": false
+      },
+      "numberOfElements": 5,
+      "first": true,
+      "last": false,
+      "size": 5,
+      "number": 0,
+      "empty": false
     },
     {
-      "postId": "2",
-      "postCategory": [
+      "page": 1,
+      "content": [
         {
-          "postCategoryId": "1",
-          "name": "귀여움"
+          "postId": 25,
+          "boardMainId": 25,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "갸ㅇ 올려ㅓㅓㅓㅓㅓㅎㅎㅎ",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:41:24.626",
+          "nickname": "25",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
+        },
+        {
+          "postId": 24,
+          "boardMainId": 24,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "사진이 없더",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:41:17.617",
+          "nickname": "24",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
+        },
+        {
+          "postId": 23,
+          "boardMainId": 23,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "nickname": "23",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
+        },
+        {
+          "postId": 22,
+          "boardMainId": 22,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "우리집 강아지는 왈오라와로아ㅗ라오라와롸롸ㅏㅏㅏㅏㄹㄹㄹ",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:41:02.681",
+          "nickname": "22",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
+        },
+        {
+          "postId": 21,
+          "boardMainId": 21,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "잠을 자서 좋겠지 ㅎㅎㅎ...",
+          "likeCnt": 0,
+          "dateTime": "2022-07-11T16:40:51.561",
+          "nickname": "21",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": []
         }
       ],
-      "boardMain": [
-        {
-          "boardMainId": "2",
-          "user": [
-            {
-              "nickname": "2번요",
-              "img": ""
-            }
-          ],
-          "content": "두번째 포스트입니다.",
-          "imgURL": [
-            {
-              "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpuSwh_DY_07CwE4VPd8HDpX1wfLGS_k5aFA&usqp=CAU"
-            }
-          ],
-          "likeCnt": "222",
-          "viewCnt": "222",
-          "createdAt": "2022-07-02"
-        }
-      ]
-    },
-    {
-      "postId": "3",
-      "postCategory": [
-        {
-          "postCategoryId": "2",
-          "name": "예쁨"
-        }
-      ],
-      "boardMain": [
-        {
-          "boardMainId": "3",
-          "user": [
-            {
-              "nickname": "3번요",
-              "img": ""
-            }
-          ],
-          "content": "세번째 포스트입니다.",
-          "imgURL": [
-            {
-              "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3beT1ULdyy5CSeLhDYdLRt1CmOjET0FZ4NQ&usqp=CAU"
-            }
-          ],
-          "likeCnt": "333",
-          "viewCnt": "333",
-          "createdAt": "2022-07-03"
-        }
-      ]
-    },
-    {
-      "postId": "4",
-      "postCategory": [
-        {
-          "postCategoryId": "3",
-          "name": "웃김"
-        }
-      ],
-      "boardMain": [
-        {
-          "boardMainId": "4",
-          "user": [
-            {
-              "nickname": "4번요",
-              "img": ""
-            }
-          ],
-          "content": "네번째 포스트입니다.",
-          "imgURL": [
-            {
-              "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe4BJINBwG-mGlIZu4FpdrdT7eTEO36cPuRA&usqp=CAU"
-            }
-          ],
-          "likeCnt": "444",
-          "viewCnt": "444",
-          "createdAt": "2022-07-04"
-        }
-      ]
+      "pageable": {
+        "sort": {
+          "sorted": true,
+          "unsorted": false,
+          "empty": false
+        },
+        "pageNumber": 1,
+        "pageSize": 5,
+        "offset": 0,
+        "unpaged": false,
+        "paged": true
+      },
+      "sort": {
+        "sorted": true,
+        "unsorted": false,
+        "empty": false
+      },
+      "numberOfElements": 5,
+      "first": true,
+      "last": true,
+      "size": 5,
+      "number": 0,
+      "empty": false
     }
   ],
   "comment": [
@@ -167,11 +227,29 @@
       "content": "댓글테스트5"
     },
     {
-      "postId": "0",
+      "postId": 0,
+      "userId": 0,
+      "nickname": "test",
+      "content": "ㅇㅇㅇㅇㅇㅇㅇㅇㅇ",
+      "id": "QvvYRaz"
+    },
+    {
+      "postId": 0,
       "userId": 0,
       "nickname": "test",
       "content": "",
-      "id": "0L27qqg"
+      "id": "osxcyPc"
+    },
+    {
+      "postId": "11",
+      "userId": 0,
+      "nickname": "test",
+      "content": "ㅇㅇㅇㅇㅇㅇㅇㅇㅇ",
+      "id": "i1kE-gz"
+    },
+    {
+      "content": "dddddd",
+      "id": "hiKqx2A"
     }
   ],
   "heart": [
@@ -219,6 +297,254 @@
       "likeCnt": "",
       "viewCnt": "",
       "createdAt": ""
+    }
+  ],
+  "rank-now": [
+    {
+      "postId": 22,
+      "boardMainId": 22,
+      "boardKind": "POST",
+      "postCategory": "PRETTY",
+      "contents": "랄랄랄랄토바이",
+      "likeCnt": 8,
+      "dateTime": "2022-07-11T16:41:10.751",
+      "userNickname": "22",
+      "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+      "img": [
+        {
+          "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+        }
+      ]
+    },
+    {
+      "postId": 23,
+      "boardMainId": 23,
+      "boardKind": "POST",
+      "postCategory": "PRETTY",
+      "contents": "랄랄랄랄토바이",
+      "likeCnt": 2,
+      "dateTime": "2022-07-11T16:41:10.751",
+      "userNickname": "23",
+      "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+      "img": [
+        {
+          "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+        }
+      ]
+    }
+  ],
+  "rank-week": [
+    {
+      "category": "cute",
+      "content": [
+        {
+          "postId": 1,
+          "boardMainId": 1,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 1111,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "1",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        },
+        {
+          "postId": 2,
+          "boardMainId": 2,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 222,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "2",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        },
+        {
+          "postId": 3,
+          "boardMainId": 3,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 33,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "3",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "cool",
+      "content": [
+        {
+          "postId": 4,
+          "boardMainId": 4,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 444,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "4",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        },
+        {
+          "postId": 5,
+          "boardMainId": 5,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 55,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "5",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        },
+        {
+          "postId": 6,
+          "boardMainId": 6,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 6,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "6",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "comic",
+      "content": [
+        {
+          "postId": 7,
+          "boardMainId": 7,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 777,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "7",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        },
+        {
+          "postId": 8,
+          "boardMainId": 8,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 88,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "8",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        },
+        {
+          "postId": 9,
+          "boardMainId": 9,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 9,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "99",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "pretty",
+      "content": [
+        {
+          "postId": 1000,
+          "boardMainId": 1000,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 1000,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "23",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        },
+        {
+          "postId": 999,
+          "boardMainId": 999,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 999,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "999",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        },
+        {
+          "postId": 88,
+          "boardMainId": 88,
+          "boardKind": "POST",
+          "postCategory": "PRETTY",
+          "contents": "랄랄랄랄토바이",
+          "likeCnt": 88,
+          "dateTime": "2022-07-11T16:41:10.751",
+          "userNickname": "8",
+          "userProfileImg": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png",
+          "img": [
+            {
+              "url": "https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

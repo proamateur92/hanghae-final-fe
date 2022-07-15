@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
     "styled-reset": "^4.4.1",
+    "sweetalert2": "^11.4.22",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.3",
     "workbox-broadcast-update": "^6.5.3",

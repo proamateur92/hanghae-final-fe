@@ -9,7 +9,7 @@ import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux/es/exports";
 import { addDataDB, removeDataDB } from "../redux/modules/postSlice";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
 import instance from "../shared/axios";
 
 const PostWrite = () => {
@@ -156,8 +156,7 @@ const TitleBox = styled.div`
 
 const InputBox = styled.div`
   width: 80%;
-  height: 650px;
-  overflow: auto;
+  height: 70%;
   margin: 0 10% 0 10%;
 
   p {

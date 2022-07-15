@@ -5,10 +5,12 @@ const Wrap = props => {
 };
 
 const Container = styled.div`
-  max-width: 599px;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
-  border: 2px solid black;
+  max-width: 599px;
+  margin: 0 auto 12.2vh;
+  border: 1px solid #ddd;
+  position: relative;
 `;
 
 export default Wrap;
