@@ -83,7 +83,7 @@ export const modifyDataDB = createAsyncThunk(
   async (newData) => {
     console.log(newData.data,"data", newData.id,"id")
     await instance.patch('/api/post/' + newData.id, newData.data)
-    window.alert('수정되었습니다'))
+    window.alert('수정되었습니다')
     return newData
   }
 )
