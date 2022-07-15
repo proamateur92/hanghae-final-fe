@@ -3,6 +3,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 //axios
 import axios from 'axios'
+import { useDispatch } from 'react-redux';
 import instance from '../../shared/axios';
 // import instance from '../../shared/axios';
 
@@ -70,6 +71,7 @@ export const loadPostsDB = createAsyncThunk(
 export const addDataDB = createAsyncThunk(
   'addData',
   async (data) => {
+    console.log(data,"츄가")
     const response = await instance.post("/api/post", data);
     const newPoster = { ...data, boardmainId: response.data.boardMainId }
     return newPoster
@@ -78,11 +80,11 @@ export const addDataDB = createAsyncThunk(
 
 export const modifyDataDB = createAsyncThunk(
   'modifyData', 
-  async (id, data) => {
-    console.log(data, id)
-    await instance.patch('/api/post' + id, data)
-    window.alert('수정되었습니다')
-    return data
+  async (newData) => {
+    console.log(newData.data,"data", newData.id,"id")
+    await instance.patch('/api/post/' + newData.id, newData.data)
+    window.alert('수정되었습니다'))
+    return newData
   }
 )
 
@@ -159,15 +161,12 @@ const postSlice = createSlice({
 
     //수정하기
     [modifyDataDB.fulfilled] : (state, { payload })=> {
-  state.list.map(
+    state.list.map(
     (post) => {
       console.log(payload, "무 ㅓ야야야")
       if (post.id === payload.id) {
         return {
-          ...post,
-          categoryName: payload.data.categoryName,
-          content: payload.data.content,
-          postImages : payload.data.postImages
+          ...post, payload
           }
       } else {
         return post

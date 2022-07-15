@@ -27,7 +27,7 @@ const PostWrite = () => {
  // 카테고리 값 select으로 넣기
   const category = (e) => {
     setSelect(e.target.value)
-    // console.log(e.target.value)
+     console.log(e.target.value)
   }
 
   //data 설정해 reducer로 보내기(더하기)
@@ -104,7 +104,7 @@ const PostWrite = () => {
 
 
   return (
-    <Wrap>
+    <div>
       <TitleBox>
         <h1 style={{ fontSize : "20px" }}>자랑하개</h1>
       </TitleBox>
@@ -150,7 +150,7 @@ const PostWrite = () => {
         </ButtonBox>
       </InputBox>
       
-    </Wrap>
+    </div>
   );
 };
 
@@ -169,7 +169,8 @@ text-align: center;
 
 const InputBox = styled.div `
 width: 80%;
-height: 70%;
+height: 650px;
+overflow: auto;
 margin: 0 10% 0 10%;
 
 
@@ -180,16 +181,7 @@ margin: 0 10% 0 10%;
     margin: 15px 0;
   }
 
-  input{
-    font-size: 16px;
-    opacity: 20%;
-    padding: 3px;
-    width: 100%;
-    height: 4%;
-    border-radius: 10px;
-    border: 1px solid black;
-
-  }
+ 
    select{
     font-size: 16px;
     opacity: 20%;
@@ -268,7 +260,7 @@ const Content = styled.textarea `
 
 const ButtonBox = styled.div `
   text-align: center;
-  padding: 4% 0 4% 0;
+  padding: 5% 0 5% 0;
   width: 100%;
   height: 30%;
   /* margin: 0 10% 0 10%; */

@@ -50,7 +50,7 @@ const PostUpdate = () => {
  
 }, []);
   
-//data 수정해 reducer로 보내기(수정하기하기)
+//data 수정해 reducer로 보내기(수정하기)
   const updatePost = async (e) => {
     window.URL.revokeObjectURL(showImages)
     e.preventDefault();
@@ -68,14 +68,20 @@ const PostUpdate = () => {
       formData
      )
     console.log(response.data)
-    const data = {
+    const Data = {
       categoryName: select,
       content: contentRef.current.value,
       postImages: response.data
     }
+
+    const newData = {
+      id: params.id,
+      data : Data
+    }
   
-    console.log(data)
-    dispatch(modifyDataDB(params.id, data));
+    console.log(newData)
+    dispatch(modifyDataDB( newData ));
+   
   }
 
    const handelAddImg = (e) => {
@@ -155,7 +161,7 @@ const PostUpdate = () => {
         <Content ref={contentRef} defaultValue={data?.contents}/>
         <ButtonBox>
           <CancelBtn onClick={()=>navigate('/post')}>취소</CancelBtn>
-          <AddBtn onClick={updatePost}>작성하기</AddBtn>
+          <AddBtn onClick={updatePost}>수정하기</AddBtn>
         </ButtonBox>
         
       </InputBox>
@@ -163,21 +169,24 @@ const PostUpdate = () => {
   );
 };
 
-const TitleBox = styled.div`
-  text-align: center;
-   padding: 19px 150px 18px 151px;
-  margin-top: 20px;
-
+const TitleBox = styled.div `
+text-align: center;
+  width: 100%;
+  height: 6%;
+ 
   h1{
+    width: 100%;
     font-size: 20px;
     font-weight: bold;
+    margin-top: 10%;
   }
 `
 
-
-const InputBox = styled.div`
+const InputBox = styled.div `
 width: 80%;
-margin: 10%;
+height: 650px;
+overflow: auto;
+margin: 0 10% 0 10%;
 
 
   p{
@@ -187,42 +196,49 @@ margin: 10%;
     margin: 15px 0;
   }
 
-  select{
+ 
+   select{
     font-size: 16px;
     opacity: 20%;
     padding: 3px;
     width: 300px;
-    height: 30px;
+    height: 5%;
     border-radius: 10px;
+    width: 50%;
+    
   }
 `
-const ImgPut = styled.input`
-  margin-top: 5px;
+
+const ImgBox = styled.div `
+    width:100%;
+    height: 18%;
 `
 
-const Preview = styled.div`
+
+
+const Preview = styled.div `
 justify-content: center;
   display: flex;
-  
+  height: 11%;
 `
 
-const PreviewImg = styled.img`
+const PreviewImg = styled.img `
  width: 68px;
- height: 68px;
+ height: 100%;
  border-radius: 5px;
- margin-top: 10px;
+ margin-top: 1%;
 `
 
-const PlusImgBox = styled.div`
+const PlusImgBox = styled.div `
 display: flex;
 justify-content: center;
   width: 68px;
-  height: 68px;
-  margin-top: 11px;
+  height: 100%;
+  /* margin-top: 11px; */
   /* background-color: aqua; */
 `
 
-const PlusImg = styled.div`
+const PlusImg = styled.div `
   border: 2px solid #000;
   opacity: 0.3;
   width: 20px;
@@ -237,42 +253,46 @@ const PlusImg = styled.div`
     font-weight: bold;
     font-size: 25px;
     margin-top: -5px;
+    margin-left: 1px;
   }
 `
 
-const DeleteImg = styled.button`
+const DeleteImg = styled.button `
   background-color: transparent;
   color: gray;
   left: 2px;
 `
 
-const Content = styled.textarea`
+const Content = styled.textarea `
   border: none;
   width: 100%;
-  height: 380px;
+  height: 40%;
   margin: 5px 0 0;
   border-radius: 10px;
   background-color: #f8f8f8;
   
 `
 
-const ButtonBox = styled.div`
+const ButtonBox = styled.div `
   text-align: center;
-  padding: 20px;
+  padding: 5% 0 5% 0;
+  width: 100%;
+  height: 30%;
+  /* margin: 0 10% 0 10%; */
 `
 
-const CancelBtn = styled.button`
-  width: 40%;
-  height: 50px;
+const CancelBtn = styled.button `
+  width: 46%;
+  height: 28%;
   flex-grow: 0;
   
   
   border-radius: 10px;
   background-color: #f2f2f2;
 `
-const AddBtn = styled.button`
-  width: 40%;
-  height: 50px;
+const AddBtn = styled.button `
+  width: 46%;
+  height: 28%;
   flex-grow: 0;
   margin-left: 7%;
   border-radius: 10px;

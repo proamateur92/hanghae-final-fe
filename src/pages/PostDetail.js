@@ -82,7 +82,7 @@ useEffect(() => {
           <Jum>
             <JumMom>
               <IoMdMore id="optionMenu" onClick={menuOpen} />
-              {bubbleOn ? <EditBubble contentsId={data?.postId} setBubbleOn={setBubbleOn} /> : null}
+              {bubbleOn ? <EditBubble contentsId={data?.boardMainId} setBubbleOn={setBubbleOn} /> : null}
             </JumMom>
           </Jum>
         </UserInfo>
