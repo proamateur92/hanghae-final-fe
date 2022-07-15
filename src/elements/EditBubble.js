@@ -1,11 +1,16 @@
 // style
 import styled from "styled-components";
 
+// router
 import { useNavigate, useParams } from "react-router-dom";
+
+// react
 import React from "react";
 
-import { useDispatch } from "react-redux/es/hooks/useDispatch";
+// redux
+import { useDispatch } from "react-redux";
 
+// postSlice
 import { removeDataDB } from "../redux/modules/postSlice";
 
 const EditBubble = (props) => {
@@ -13,12 +18,11 @@ const EditBubble = (props) => {
   const contentsId = props.contentsId;
   const setBubbleOn = props.setBubbleOn;
   const bubbleRef = React.useRef();
-  const backDropRef = React.useRef();
-  const params = useParams(); 
+  const params = useParams();
   const dispatch = useDispatch();
 
   const backDropClose = () => {
-      setBubbleOn(false);
+    setBubbleOn(false);
   };
 
   const moveToEdit = () => {
@@ -26,21 +30,21 @@ const EditBubble = (props) => {
   };
 
   const deleteAction = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     if (window.confirm("정말 삭제하시겠어요?")) {
-       dispatch(removeDataDB(contentsId)) //removeDateDB에 id 전달해줌.
+      dispatch(removeDataDB(contentsId)); //removeDateDB에 id 전달해줌.
     }
-   
-    
   };
 
   return (
     <>
-    <Bubble ref={bubbleRef}>
-      <p onClick={() => moveToEdit()}>수정하기</p>
-      <p onClick={(e) => deleteAction(e)} style={{ color : "red"}}>삭제하기</p>
-    </Bubble>
-    <BackDrop onClick={backDropClose}/>
+      <Bubble ref={bubbleRef}>
+        <p onClick={() => moveToEdit()}>수정하기</p>
+        <p onClick={(e) => deleteAction(e)} style={{ color: "red" }}>
+          삭제하기
+        </p>
+      </Bubble>
+      <BackDrop onClick={backDropClose} />
     </>
   );
 };

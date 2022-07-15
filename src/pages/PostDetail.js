@@ -1,34 +1,32 @@
 import React, { useEffect, useState } from "react";
-import Wrap from "../elements/Wrap";
-import styled from "styled-components";
-import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { removeDataDB } from "../redux/modules/postSlice";
 
+// components
+import Comment from "../components/Comment";
+
+// elements
+import Wrap from "../elements/Wrap";
+import EditBubble from "../elements/EditBubble";
+
+// style
+import styled from "styled-components";
+
+// router
+import { useParams, useNavigate } from "react-router-dom";
+
+// icon
 import { IoMdMore } from "react-icons/io";
 import { IoHeartOutline, IoChatbubbleOutline, IoHeart } from "react-icons/io5";
 
-import Comment from "../components/Comment";
-import EditBubble from "../elements/EditBubble";
-
+// axios
 import instance from "../shared/axios";
 
 const PostDetail = () => {
   const params = useParams();
   const [data, setData] = useState(); //Api에서 받은 데이터 변수 설정
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [bubbleOn, setBubbleOn] = React.useState(false);
-  const [testImg, setTestImg] = useState([
-    {
-      url: "https://img.animalplanet.co.kr/news/2020/07/15/700/e05t9x1o0e3trklpwrr3.jpg",
-    },
-    { url: "https://cdn.mediaville.co.kr/news/photo/202104/496_554_4651.jpg" },
-    {
-      url: "https://img.khan.co.kr/news/2019/11/29/l_2019112901003607500286631.jpg",
-    },
-  ]);
   const [like, setLike] = useState();
 
   const menuOpen = () => {
@@ -41,18 +39,13 @@ const PostDetail = () => {
       setData(response.data); //useState의 data에 넣어준다.
       // console.log(response.data)
     });
-  }, [like]);
+  }, [params.id, like]);
 
   useEffect(() => {
     instance.get("/api/post/category/all?page=0").then((response) => {
       // console.log(response.data)
     });
   }, []);
-
-  const deletePost = (e) => {
-    e.preventDefault();
-    dispatch(removeDataDB(params.id)); //removeDateDB에 id 전달해줌.
-  };
 
   const clickHeart = () => {
     instance.post("/api/heart/" + params.id).then((res) => {
@@ -66,14 +59,7 @@ const PostDetail = () => {
       // console.log(res)
       setLike(res.data);
     });
-  }, []);
-
-  useEffect(() => {
-    instance.get("/api/heart/" + params.id).then((res) => {
-      console.log(res);
-      setLike(res.data);
-    });
-  }, []);
+  }, [params.id]);
 
   return (
     <Wrap>
@@ -97,7 +83,7 @@ const PostDetail = () => {
               <IoMdMore id="optionMenu" onClick={menuOpen} />
               {bubbleOn ? (
                 <EditBubble
-                  contentsId={data?.boardMainId}
+                  contentsId={data?.postId}
                   setBubbleOn={setBubbleOn}
                 />
               ) : null}

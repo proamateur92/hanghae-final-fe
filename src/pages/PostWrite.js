@@ -1,19 +1,25 @@
-import Wrap from "../elements/Wrap";
-//style
-import styled from "styled-components";
-
 //react
 import React, { useRef, useState } from "react";
 
+// elements
+import Wrap from "../elements/Wrap";
+
+//style
+import styled from "styled-components";
+
 //redux
 import { useDispatch } from "react-redux/es/exports";
-import { addDataDB, removeDataDB } from "../redux/modules/postSlice";
+
+//router
 import { useNavigate } from "react-router-dom";
 
+// postSlice
+import { addDataDB } from "../redux/modules/postSlice";
+
+// axios
 import instance from "../shared/axios";
 
 const PostWrite = () => {
-  const imgRef = useRef();
   const contentRef = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -24,7 +30,7 @@ const PostWrite = () => {
   // 카테고리 값 select으로 넣기
   const category = (e) => {
     setSelect(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value)
   };
 
   //data 설정해 reducer로 보내기(더하기)
@@ -34,7 +40,6 @@ const PostWrite = () => {
     console.log(getImages);
     let img = getImages;
     const formData = new FormData();
-    let files = [];
 
     for (let i = 0; i < img.length; i++) {
       //  console.log(img[i])
@@ -91,7 +96,7 @@ const PostWrite = () => {
   return (
     <div>
       <TitleBox>
-        <h1 style={{ fontSize: "20px" }}>자랑하개</h1>
+        <h1>자랑하개</h1>
       </TitleBox>
       <InputBox>
         <p>카테고리</p>
@@ -175,11 +180,6 @@ const InputBox = styled.div`
     border-radius: 10px;
     width: 50%;
   }
-`;
-
-const ImgBox = styled.div`
-  width: 100%;
-  height: 18%;
 `;
 
 const Preview = styled.div`

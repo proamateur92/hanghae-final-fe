@@ -1,5 +1,5 @@
 // react
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 
 // route
 import { Routes, Route, BrowserRouter } from "react-router-dom";

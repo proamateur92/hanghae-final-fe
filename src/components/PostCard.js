@@ -1,23 +1,26 @@
-import React from "react";
+// react
+import React from 'react';
 
-import { useNavigate } from "react-router-dom";
+// router
+import { useNavigate } from 'react-router-dom';
 
-// 컴포넌트
-import EditBubble from "../elements/EditBubble";
- 
-// CSS 관련 임포트
-import styled from "styled-components";
-import { IoMdMore } from "react-icons/io";
-import { IoHeartOutline, IoChatbubbleOutline } from "react-icons/io5";
+// componnet
+import EditBubble from '../elements/EditBubble';
+
+// style
+import styled from 'styled-components';
+
+// icon
+import { IoMdMore } from 'react-icons/io';
+import { IoHeartOutline, IoChatbubbleOutline } from 'react-icons/io5';
 
 const PostCard = (props) => {
   const navigate = useNavigate();
-  const postData = props.data
+  const postData = props.data;
   const boardMainId = props.data.boardMainId;
 
   const [bubbleOn, setBubbleOn] = React.useState(false);
 
-  
   const menuOpen = () => {
     setBubbleOn(!bubbleOn);
   };
@@ -27,17 +30,19 @@ const PostCard = (props) => {
       <CardHeader>
         <UserInfo>
           <UserProfile img={postData.userProfileImg} />
-          <span id="nickname"> {postData.nickname} </span>
+          <span id='nickname'> {postData.nickname} </span>
         </UserInfo>
 
-        <IoMdMore id="optionMenu" onClick={menuOpen} />
+        <IoMdMore id='optionMenu' onClick={menuOpen} />
         {bubbleOn ? <EditBubble contentsId={boardMainId} setBubbleOn={setBubbleOn} /> : null}
-
-
       </CardHeader>
 
       <Contents onClick={() => navigate('/post/detail/' + boardMainId)}>
-        <ImgPreview img={"https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"} />
+        <ImgPreview
+          img={
+            'https://anyzoo-photo-bucket.s3.ap-northeast-2.amazonaws.com/user/45deb63e-1432-4a41-8637-74314093895a%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png'
+          }
+        />
         <TextPreview> {postData.contents} </TextPreview>
       </Contents>
 
@@ -49,7 +54,6 @@ const PostCard = (props) => {
         <span>
           <IoChatbubbleOutline /> {postData.likeCnt}
         </span>
-        
       </Reactions>
     </CardWrap>
   );
@@ -84,21 +88,21 @@ const UserInfo = styled.span`
 `;
 
 const UserProfile = styled.span`
-width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    margin-right: 12px;
-    background: url(${(props) => props.img
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin-right: 12px;
+  background: url(${(props) =>
+    props.img
       ? props.img
-      : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FopbGC%2FbtrF9ZNhpja%2FY026LUE8lwKcGmfqJiO3SK%2Fimg.png"});
-       background-size: cover;
-    background-position: center;
-
-`
+      : 'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FopbGC%2FbtrF9ZNhpja%2FY026LUE8lwKcGmfqJiO3SK%2Fimg.png'});
+  background-size: cover;
+  background-position: center;
+`;
 
 const Contents = styled.div`
   cursor: pointer;
-`
+`;
 
 const ImgPreview = styled.div`
   width: 100%;
@@ -106,7 +110,7 @@ const ImgPreview = styled.div`
   background: url(${(props) =>
     props.img
       ? props.img
-      : "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FopbGC%2FbtrF9ZNhpja%2FY026LUE8lwKcGmfqJiO3SK%2Fimg.png"});
+      : 'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FopbGC%2FbtrF9ZNhpja%2FY026LUE8lwKcGmfqJiO3SK%2Fimg.png'});
   background-size: cover;
   background-position: center;
   margin: auto;

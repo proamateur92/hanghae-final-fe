@@ -1,9 +1,14 @@
-import React from "react";
+// react
+import React from 'react';
 
-import { useSelector, useDispatch } from "react-redux";
-import { loadCommentsDB, addCommentDB, editCommentDB, deleteCommentDB } from "../redux/modules/commentSlice";
+// redux
+import { useSelector, useDispatch } from 'react-redux';
 
-import styled from "styled-components";
+// commentSlice
+import { loadCommentsDB, addCommentDB, editCommentDB, deleteCommentDB } from '../redux/modules/commentSlice';
+
+// style
+import styled from 'styled-components';
 
 const Comment = (props) => {
   const dispatch = useDispatch();
@@ -13,8 +18,8 @@ const Comment = (props) => {
 
   // 코멘트 불러오기
   React.useEffect(() => {
-    dispatch(loadCommentsDB({postId:postId, pgNo:0}));
-  }, []);
+    dispatch(loadCommentsDB({ postId: postId, pgNo: 0 }));
+  }, [dispatch, postId]);
 
   const comments = useSelector((state) => state.comment.list);
 
@@ -27,9 +32,9 @@ const Comment = (props) => {
       content: commentRef.current.value,
     };
 
-    console.log(postId)
+    console.log(postId);
     await dispatch(addCommentDB(newComment, postId));
-    commentRef.current.value = "";
+    commentRef.current.value = '';
   };
 
   // 코멘트 수정하기
@@ -43,7 +48,7 @@ const Comment = (props) => {
       commentRef.current.value = v.content;
       commentRef.current.focus();
     } else {
-      window.alert("작성자만 삭제할수 있어요");
+      window.alert('작성자만 삭제할수 있어요');
     }
   };
 
@@ -53,7 +58,7 @@ const Comment = (props) => {
       content: commentRef.current.value,
     };
     await dispatch(editCommentDB(newContent));
-    commentRef.current.value = "";
+    commentRef.current.value = '';
     dispatch(loadCommentsDB(postId));
     setIsEdit(false);
   };
@@ -64,7 +69,7 @@ const Comment = (props) => {
       await dispatch(deleteCommentDB(v.id));
       dispatch(loadCommentsDB(postId));
     } else {
-      window.alert("작성자만 삭제할수 있어요");
+      window.alert('작성자만 삭제할수 있어요');
     }
   };
 
@@ -119,7 +124,7 @@ const OneComment = styled.div`
 
 const CommentInput = styled.div`
   display: flex;
-  height: ${(props) => (props.is_edit ? "100px" : "30px")};
+  height: ${(props) => (props.is_edit ? '100px' : '30px')};
 
   textarea {
     width: 80%;

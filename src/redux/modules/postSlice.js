@@ -43,8 +43,16 @@ const postSlice = createSlice({
   },
 
   extraReducers: {
+    // 불러오기
     [loadPostsDB.fulfilled]: (state, { payload }) => {
       state.list = payload;
+      if (payload.pageable.pageNumber === 0) {
+        state.list = [...payload.content];
+      } else {
+        state.list = [...state.list, ...payload.content];
+      }
+      state.pageNumber = payload.pageable.pageNumber;
+      state.last = payload.last;
     },
 
     //추가하기
