@@ -83,7 +83,7 @@ const PostDetail = () => {
               <IoMdMore id="optionMenu" onClick={menuOpen} />
               {bubbleOn ? (
                 <EditBubble
-                  contentsId={data?.postId}
+                  contentsId={data?.boardMainId}
                   setBubbleOn={setBubbleOn}
                 />
               ) : null}
@@ -115,7 +115,7 @@ const PostDetail = () => {
         </Reactions>
       </All>
 
-      <Comment postId={params.id} />
+      {/* <Comment postId={params.id} /> */}
     </Wrap>
   );
 };

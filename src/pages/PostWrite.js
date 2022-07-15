@@ -161,7 +161,7 @@ const TitleBox = styled.div`
 
 const InputBox = styled.div`
   width: 80%;
-  height: 70%;
+  height: 70vh;
   margin: 0 10% 0 10%;
 
   p {
