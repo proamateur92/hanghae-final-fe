@@ -16,7 +16,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 // icon
 import { IoMdMore } from "react-icons/io";
-import { IoHeartOutline, IoChatbubbleOutline, IoHeart } from "react-icons/io5";
+import { IoHeartOutline, IoHeart } from "react-icons/io5";
 
 // axios
 import instance from "../shared/axios";
@@ -36,38 +36,38 @@ const RecruitDetail = () => {
     setBubbleOn(!bubbleOn);
   };
 
-  // axios에서 데이터를 받아오기
-  useEffect(() => {
-    instance.get("/api/together/detail/" + params.id).then((response) => {
-      setData(response.data); //useState의 data에 넣어준다.
+  // // axios에서 데이터를 받아오기
+  // useEffect(() => {
+  //   instance.get('/api/together/detail/' + params.id).then((response) => {
+  //     setData(response.data); //useState의 data에 넣어준다.
 
-      // console.log(response.data.dday);
+  //     // console.log(response.data.dday);
 
-      setInterval(() => {
-        const masTime = new Date(response.data.dday);
-        const todayTime = new Date();
-        const diff = masTime - todayTime;
+  //     setInterval(() => {
+  //       const masTime = new Date(response.data.dday);
+  //       const todayTime = new Date();
+  //       const diff = masTime - todayTime;
 
-        const diffHour = Math.floor(diff / (1000 * 60 * 60));
-        const diffMin = Math.floor((diff / (1000 * 60)) % 60);
-        const diffSec = Math.floor((diff / 1000) % 60);
+  //       const diffHour = Math.floor(diff / (1000 * 60 * 60));
+  //       const diffMin = Math.floor((diff / (1000 * 60)) % 60);
+  //       const diffSec = Math.floor((diff / 1000) % 60);
 
-        if (diffHour < 10) {
-          const Dday = `0${diffHour}:${diffMin}:${diffSec}`;
-          setLastDay(Dday);
-        } else if (diffMin < 10) {
-          const Dday = `${diffHour}:0${diffMin}:${diffSec}`;
-          setLastDay(Dday);
-        } else if (diffSec < 10) {
-          const Dday = `${diffHour}:${diffMin}:0${diffSec}`;
-          setLastDay(Dday);
-        } else {
-          const Dday = `${diffHour}:${diffMin}:${diffSec}`;
-          setLastDay(Dday);
-        }
-      }, 1000);
-    });
-  }, [params.id, like]);
+  //       if (diffHour < 10) {
+  //         const Dday = `0${diffHour}:${diffMin}:${diffSec}`;
+  //         setLastDay(Dday);
+  //       } else if (diffMin < 10) {
+  //         const Dday = `${diffHour}:0${diffMin}:${diffSec}`;
+  //         setLastDay(Dday);
+  //       } else if (diffSec < 10) {
+  //         const Dday = `${diffHour}:${diffMin}:0${diffSec}`;
+  //         setLastDay(Dday);
+  //       } else {
+  //         const Dday = `${diffHour}:${diffMin}:${diffSec}`;
+  //         setLastDay(Dday);
+  //       }
+  //     }, 1000);
+  //   });
+  // }, [params.id, like]);
 
   useEffect(() => {
     instance.get("/api/together?page=0").then((response) => {
@@ -108,18 +108,8 @@ const RecruitDetail = () => {
             <span>{data?.postCategory}</span>
           </HeadTitle>
           <JumMom>
-            <IoMdMore
-              id="optionMenu"
-              onClick={menuOpen}
-              style={{ marginLeft: "80%" }}
-            />
-            {bubbleOn ? (
-              <EditBubble
-                data={data}
-                page={"recruit"}
-                setBubbleOn={setBubbleOn}
-              />
-            ) : null}
+            <IoMdMore id="optionMenu" onClick={menuOpen} style={{ marginLeft: "80%" }} />
+            {bubbleOn ? <EditBubble data={data} page={"recruit"} setBubbleOn={setBubbleOn} /> : null}
           </JumMom>
         </HeadBtn>
       </Header>
@@ -196,7 +186,7 @@ const RecruitDetail = () => {
             </Gu>
           </JengBoLocation>
           <Chatting>
-            <AddBtn disabled="disabled">Comming soon</AddBtn>
+            <AddBtn onClick={() => navigate(`/chatting/${params.id}`)}>Comming soon</AddBtn>
           </Chatting>
           <Recruitment>
             <div>
