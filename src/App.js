@@ -28,6 +28,7 @@ import {
   RecruitDetail,
   RecruitUpdate,
   RecruitWrite,
+  ChattingRoom,
 } from "./pages/Index.js";
 
 // style
@@ -83,8 +84,9 @@ function App() {
           <Route path="/community/write" element={<CommunityWrite />} />
           <Route path="/community/update/:id" element={<CommunityUpdate />} />
           <Route path="/community/detail/:id" element={<CommunityDetail />} />
-          <Route path="/together" element={<CommunityList type='together'/>} />
-          <Route path="/community" element={<CommunityList type='community' />} />
+          <Route path="/together" element={<CommunityList type="together" />} />
+          <Route path="/community" element={<CommunityList type="community" />} />
+          <Route path="/chatting/:roomId" element={<ChattingRoom type="community" />} />
           <Route path="/recruit/write" element={<RecruitWrite />} />
           <Route path="/recruit/update/:id" element={<RecruitUpdate />} />
           <Route path="/recruit/detail/:id" element={<RecruitDetail />} />
@@ -93,7 +95,7 @@ function App() {
           <Route path="/reels" element={<Reels />} />
           <Route path="/reels/write/:id" element={<ReelsWrite />} />
           <Route path="*" element={<NotFound />} />
-        </Routes> 
+        </Routes>
       </BrowserRouter>
     </ThemeProvider>
   );
